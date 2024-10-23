@@ -25,7 +25,7 @@ export default function Home() {
 function copyClipboard() {
   navigator.clipboard.writeText("LordImmaculate");
 
-  var discordElement = document.getElementById("discord");
+  const discordElement = document.getElementById("discord");
   if (discordElement) {
     discordElement.innerHTML = "Copied!";
   }
@@ -33,7 +33,7 @@ function copyClipboard() {
 
 async function resetText() {
   await new Promise(r => setTimeout(r, 500));
-  var discordElement = document.getElementById("discord");
+  const discordElement = document.getElementById("discord");
   if (discordElement) {
     discordElement.innerHTML = "Discord: LordImmaculate";
   }
