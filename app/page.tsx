@@ -14,6 +14,9 @@ export default function Home() {
         <div>
           <a href="#" onClick={copyClipboard} onMouseOut={resetText} id="discord" className="underline">Discord: LordImmaculate</a>
         </div>
+        <div>
+          <a href="#" onClick={redeem} className="underline">Play Audio</a>
+        </div>
       </main>
       <footer className="flex flex-wrap items-center justify-center">
         <div className="text-xs">© 2024 LordImmaculate. All rights reserved.</div>
@@ -37,4 +40,9 @@ async function resetText() {
   if (discordElement) {
     discordElement.innerHTML = "Discord: LordImmaculate";
   }
+}
+
+function redeem() {
+  const audio = new Audio("/redeem.mp3");
+    audio.play();
 }
